@@ -1,6 +1,13 @@
 p5env/
 __pycache__/
 *.pyc
+*.pyo
 .DS_Store
-*.h5
 *.keras
+*.h5
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+plots/
+predictions/
