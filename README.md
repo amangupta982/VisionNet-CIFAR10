@@ -8,7 +8,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)](https://tensorflow.org)
-[![CI](https://img.shields.io/github/actions/workflow/status/YOUR_USERNAME/cifar10-cnn/ci.yml?style=flat-square&label=CI&logo=github-actions&logoColor=white)](https://github.com/YOUR_USERNAME/cifar10-cnn/actions)
+[![CI](https://img.shields.io/github/actions/workflow/status/amangupta982/cifar10-cnn/ci.yml?style=flat-square&label=CI&logo=github-actions&logoColor=white)](https://github.com/amangupta982/cifar10-cnn/actions)
 [![License](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)](LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000?style=flat-square)](https://github.com/psf/black)
 [![Dataset](https://img.shields.io/badge/Dataset-CIFAR--10-8B5CF6?style=flat-square)](https://www.cs.toronto.edu/~kriz/cifar.html)
@@ -107,7 +107,7 @@ Input (32×32×3)
 
 ```bash
 # 1. Clone
-git clone https://github.com/YOUR_USERNAME/cifar10-cnn.git
+git clone https://github.com/amangupta982/cifar10-cnn.git
 cd cifar10-cnn
 
 # 2. Set up isolated environment (one time)
