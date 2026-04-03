@@ -1,0 +1,6 @@
+p5env/
+__pycache__/
+*.pyc
+.DS_Store
+*.h5
+*.keras
