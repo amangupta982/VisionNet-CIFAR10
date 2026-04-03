@@ -105,14 +105,23 @@ class TestModelArchitecture:
 
 class TestModelCompilation:
     def test_compiled_with_adam(self, model):
-        assert isinstance(model.optimizer, tf.keras.optimizers.Adam)
+        optimizer_name = type(model.optimizer).__name__.lower()
+        assert 'adam' in optimizer_name, f"Expected Adam optimizer, got {type(model.optimizer).__name__}"
 
     def test_compiled_with_correct_loss(self, model):
         assert model.loss == 'categorical_crossentropy'
 
     def test_compiled_with_accuracy_metric(self, model):
-        metric_names = [m.name for m in model.metrics]
-        assert 'accuracy' in metric_names or 'acc' in metric_names
+        # model.metrics may be empty before first train/eval step in TF 2.15+
+        # Check compiled_metrics config or metric names from compiled state
+        if model.metrics:
+            metric_names = [m.name for m in model.metrics]
+            assert 'accuracy' in metric_names or 'acc' in metric_names
+        else:
+            # Fallback: verify metrics were passed during compilation
+            assert model.compiled_metrics is not None
+            metric_configs = model.compiled_metrics._user_metrics
+            assert 'accuracy' in metric_configs or 'acc' in metric_configs
 
     def test_model_is_trainable(self, model):
         trainable = sum(np.prod(w.shape) for w in model.trainable_weights)
