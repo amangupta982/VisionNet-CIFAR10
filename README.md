@@ -264,5 +264,5 @@ MIT — see [LICENSE](LICENSE) for details.
 ---
 
 <div align="center">
-<sub>Built for 23CSE610 — Artificial Neural Networks and Deep Learning · Jain University</sub>
+<sub>Built by Aman Gupta — Artificial Neural Networks and Deep Learning </sub>
 </div>

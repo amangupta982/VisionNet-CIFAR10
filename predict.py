@@ -1,7 +1,5 @@
 """
 ============================================================
-  23CSE610 - Artificial Neural Networks and Deep Learning
-  Project 5: Image Classification using CNN
   FILE: predict.py
 
   Usage:
